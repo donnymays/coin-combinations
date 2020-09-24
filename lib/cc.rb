@@ -11,7 +11,7 @@ class CC
       @quarters += 1 
       input -= 25
     end
-    return @quarters
+    return input
   end
   
   def dimes(input)
@@ -19,7 +19,7 @@ class CC
       @dimes += 1
       input -= 10  
     end
-    return @dimes
+    return input
   end   
   
   def nickels(input)
@@ -27,7 +27,7 @@ class CC
       @nickels += 1
       input -= 5  
     end
-    return @nickels
+    return input
   end  
   
   def pennies(input)
@@ -35,18 +35,19 @@ class CC
       @pennies += 1
       input -= 1  
     end
-    return @pennies
+    return input
   end    
   
-  def coins
-    
+  def coins(input)
+    input = quarters(input)
+    input = dimes(input)
+    input = nickels(input)
+    input = pennies(input)
+    return "You have #{@quarters} quarters, #{@dimes} dimes, #{@nickels} nickles, and #{@pennies} pennies."
   end
 end
 
 
-    # puts "You have #{@quarters} quarters, #{@dimes} dimes, #{@nickels} nickles, and #{@pennies} pennies."
-#   end
-# end
 
 
 
