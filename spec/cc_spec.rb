@@ -32,7 +32,7 @@ end
 describe("CC#coins") do
   it("correctly returns the least amount of coins when given a total amount of cents") do
     coin = CC.new()
-    expect(coin.coins(63)).to(eq("You have 1 quarters, 1 dimes, 0 nickles, and 3 pennies."))
+    expect(coin.coins(63)).to(eq("You have 2 quarters, 1 dimes, 0 nickles, and 3 pennies."))
   end
 end
 
